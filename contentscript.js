@@ -1,7 +1,7 @@
 class MyElement extends HTMLElement {
-  constructor() {
+  constructor(self) {
     // Always call super first in constructor
-    super();
+    self = super(self);
 
     // Create a shadow root
     var shadow = this.attachShadow({mode: 'open'});
@@ -11,10 +11,12 @@ class MyElement extends HTMLElement {
 
     // Add the element to the shadow root.
     shadow.appendChild(doc);
+
+    return self;
   }
 }
 
-installCustomElements(window, 'force');
+installCustomElements(window, 'force-all');
 
 // Define the new element
 customElements.define('my-element', MyElement);

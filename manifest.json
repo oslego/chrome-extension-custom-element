@@ -7,7 +7,7 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["document-register-element.node.js",  "contentscript.js"]
+      "js": ["ponyfill.js",  "contentscript.js"]
     }
   ]
 }
