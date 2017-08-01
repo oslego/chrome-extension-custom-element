@@ -7,7 +7,7 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["webcomponents-sd-ce.js",  "contentscript.js"]
+      "js": ["document-register-element.node.js",  "contentscript.js"]
     }
   ]
 }

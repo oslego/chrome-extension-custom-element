@@ -14,6 +14,8 @@ class MyElement extends HTMLElement {
   }
 }
 
+installCustomElements(window, 'force');
+
 // Define the new element
 customElements.define('my-element', MyElement);
 
